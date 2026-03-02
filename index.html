@@ -67,6 +67,11 @@
             width: max-content;
             animation: ticker 25s linear infinite;
         }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee { animation: marquee 40s linear infinite; }
         
         /* ========== Efeitos de Brilho ========== */
         .btn-glow { box-shadow: 0 0 30px -5px rgba(6, 178, 71, 0.5); }
@@ -132,18 +137,18 @@
         </a>
     </div>
 
-    <header id="hero" class="relative text-white py-24 md:py-32 px-4 md:px-6 text-center overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(19, 19, 15, 0.8), rgba(19, 19, 15, 0.95), rgba(19, 19, 15, 1)), url('./assets/WEB.webp'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <header id="hero" class="relative text-white py-24 md:py-32 px-4 md:px-6 text-center overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(19, 19, 15, 0.8), rgba(19, 19, 15, 0.95), rgba(19, 19, 15, 1)), url('img/bgHero.webp'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[600px] md:h-[800px] bg-brand/15 blur-[120px] md:blur-[150px] rounded-full pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10" data-animate="fade">
-            <img src="./assets/logo.svg" alt="Personal Trainer Academy" class="h-10 md:h-14 w-auto mb-8 md:mb-10 drop-shadow-lg" />
+            <img src="img/logo-consumidor.svg" alt="Personal Trainer Academy" class="h-10 md:h-14 w-auto mb-8 md:mb-10 drop-shadow-lg" />
             
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900/60 border border-zinc-700/50 backdrop-blur-md mb-8 md:mb-10 shadow-2xl">
                 <span class="flex h-2 w-2 rounded-full bg-brand animate-pulse"></span>
                 <span class="text-[10px] md:text-xs font-bold text-zinc-300 tracking-widest uppercase">Reconhecida pelo MEC</span>
             </div>
 
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.1] mb-6 drop-shadow-2xl">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.1] mb-6 drop-shadow-2xl uppercase">
                 Fisiologia do Exercício, <br class="hidden md:block">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#05B147] to-[#C6DF48]">Aplicada a Grupos Especiais</span>
             </h1>
@@ -415,69 +420,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="professores" class="py-20 md:py-32 px-4 md:px-6 bg-zinc-950 relative overflow-hidden border-t border-zinc-900">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-brand/5 blur-[120px] pointer-events-none"></div>
-
-        <div class="max-w-5xl mx-auto relative z-10">
-            <div class="text-center mb-16 md:mb-24">
-                <span class="inline-block bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 shadow-sm" data-animate>
-                    Corpo Docente
-                </span>
-                <h3 class="text-3xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6 text-white tracking-tight" data-animate data-animate-delay="1">
-                    Profissionais <span class="text-brand">Especializados</span>
-                </h3>
-                <p class="text-zinc-400 max-w-2xl mx-auto text-base md:text-xl font-light" data-animate data-animate-delay="2">
-                    Uma equipe de profissionais altamente capacitados que irão te guiar no caminho do sucesso com Grupos Especiais.
-                </p>
-            </div>
-            
-            <div class="relative w-full overflow-hidden py-4" data-animate="up">
-                <div class="absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-zinc-950 to-transparent pointer-events-none"></div>
-                <div class="absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-zinc-950 to-transparent pointer-events-none"></div>
-                
-                <div class="flex w-max animate-marquee hover:[animation-play-state:paused]">
-                    <div class="flex gap-8 px-4">
-                        <img src="./assets/professores/1-r75tjyqb6hheyiqs3k0k1y6iiygylqvo6cg9nvayzk.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/2-r75tk0lzk5jzlqo1sktt6xpfpq7p1534ulr8mf86n4.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/3-r75tk2hnxtmk8ylbhln2bx8cwhyfgjaliv27kz5eao.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/4-r75tk4dcbhp4w6il6mgbgwra39p5vxi274d6jj2ly8.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/5-r75tk5b6ibqf7sh814uy1eiqonkj3mlsj90o0t17s0.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/6-r75tk76uvzszv0ehq5o76e1nvfb9j0t97ibmzcyffk.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/7-r75tk92j9nvki8brf6hgbdkl271zyf0pvrmlxwvn34.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/8-r75tkay7nby55g9147apgd3i8ysqdt86k0xkwgsuqo.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/9-r75tkctw100pso6at83ylcmffqjgt7fn8a8jv0q2e8.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/10-r75tkepkeo3afw3ki8x7qc5cmia78ln3wjjitkna1s.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/11-r75tkgl8sc5v340u79qgvbo9ta0xnzukksuhs4khpc.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/12-r75tkigx608fqby3wajq0b7701ro3e21925gqohpcw.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/15-r75tkp1shuhfzlojtve3zrjf5qv8l9s5lypv3m7y5c.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/16-r75tkqxgvik0mtltiw7d4r2ccilz0nzma80u2655sw.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/17-r75tkst596mla1j37x0m9ql9jacpg272yhbt0q2dgg.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/18-r75tkuotmup5x9gcwxtveq46q23fvgejmqmrz9zl40.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                    </div>
-                    <div class="flex gap-8 px-4">
-                        <img src="./assets/professores/1-r75tjyqb6hheyiqs3k0k1y6iiygylqvo6cg9nvayzk.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/2-r75tk0lzk5jzlqo1sktt6xpfpq7p1534ulr8mf86n4.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/3-r75tk2hnxtmk8ylbhln2bx8cwhyfgjaliv27kz5eao.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/4-r75tk4dcbhp4w6il6mgbgwra39p5vxi274d6jj2ly8.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/5-r75tk5b6ibqf7sh814uy1eiqonkj3mlsj90o0t17s0.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/6-r75tk76uvzszv0ehq5o76e1nvfb9j0t97ibmzcyffk.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/7-r75tk92j9nvki8brf6hgbdkl271zyf0pvrmlxwvn34.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/8-r75tkay7nby55g9147apgd3i8ysqdt86k0xkwgsuqo.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/9-r75tkctw100pso6at83ylcmffqjgt7fn8a8jv0q2e8.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/10-r75tkepkeo3afw3ki8x7qc5cmia78ln3wjjitkna1s.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/11-r75tkgl8sc5v340u79qgvbo9ta0xnzukksuhs4khpc.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/12-r75tkigx608fqby3wajq0b7701ro3e21925gqohpcw.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/15-r75tkp1shuhfzlojtve3zrjf5qv8l9s5lypv3m7y5c.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/16-r75tkqxgvik0mtltiw7d4r2ccilz0nzma80u2655sw.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/17-r75tkst596mla1j37x0m9ql9jacpg272yhbt0q2dgg.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                        <img src="./assets/professores/18-r75tkuotmup5x9gcwxtveq46q23fvgejmqmrz9zl40.webp" alt="Professor Fisiologia" class="h-[380px] w-auto object-contain rounded-xl border border-zinc-800 hover:border-brand/50 transition-all shadow-lg hover:scale-105">
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -753,7 +695,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-10 md:mb-12 border-b border-zinc-800/50 pb-10 md:pb-12 text-center md:text-left">
                 <div class="space-y-4">
-                    <img src="./assets/logo.svg" alt="Personal Trainer Academy" class="h-10 md:h-12 w-auto mx-auto md:mx-0 opacity-90" />
+                    <img src="img/logo-consumidor.svg" alt="Personal Trainer Academy" class="h-10 md:h-12 w-auto mx-auto md:mx-0 opacity-90" />
                     <p class="text-xs md:text-sm text-zinc-500 leading-relaxed mt-2 md:mt-4 max-w-xs mx-auto md:mx-0">A maior referência em pós-graduação para Personal Trainers do Brasil. Formando especialistas e líderes de mercado.</p>
                 </div>
                 <div>
@@ -761,7 +703,6 @@
                     <ul class="space-y-2 md:space-y-3 text-xs md:text-sm font-medium">
                         <li><a href="#metodologia" class="hover:text-brand transition-all duration-300">A Metodologia</a></li>
                         <li><a href="#curriculo" class="hover:text-brand transition-all duration-300">Grade Curricular</a></li>
-                        <li><a href="#professores" class="hover:text-brand transition-all duration-300">Corpo Docente</a></li>
                     </ul>
                 </div>
                 <div>
@@ -807,11 +748,12 @@
         </div>
     </div>
 
-    <div id="lead-modal-FE3" class="lead-modal-pos fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/70 backdrop-blur-sm" aria-hidden="true">
-        <div class="relative rounded-2xl shadow-2xl max-w-md w-full p-8 animate-[fadeIn_0.3s_ease-out] bg-[#13130F] border border-brand/30">
-            <button type="button" data-modal-close class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/5 hover:bg-brand/20 flex items-center justify-center text-gray-400 hover:text-white transition" aria-label="Fechar"><i class="fas fa-times"></i></button>
-            <h3 class="text-2xl font-bold text-white mb-1">Preencha seus dados</h3>
-            <p class="text-sm text-gray-400 mb-6">Para liberar seu acesso à matrícula.</p>
+    <div id="lead-modal-FE3" class="lead-modal-pos fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md" aria-hidden="true">
+        <div class="relative rounded-3xl shadow-[0_0_50px_rgba(6,178,71,0.2)] max-w-md w-full p-8 animate-[fadeIn_0.3s_ease-out] bg-zinc-950 border border-brand/40">
+            <button type="button" data-modal-close class="absolute top-4 right-4 w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 hover:bg-brand hover:border-brand flex items-center justify-center text-zinc-400 hover:text-zinc-950 transition-all"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-black text-white mb-2">Preencha seus dados</h3>
+            <p class="text-sm text-zinc-400 mb-8 font-light">Para liberar seu acesso à matrícula com o desconto exclusivo da turma 2026.</p>
+            
             <form id="form_FE3" class="space-y-4" data-product="FE3">
                 <input type="hidden" name="utm_source" class="lead-utm" data-utm="utm_source" value="">
                 <input type="hidden" name="utm_term" class="lead-utm" data-utm="utm_term" value="">
@@ -819,24 +761,27 @@
                 <input type="hidden" name="utm_medium" class="lead-utm" data-utm="utm_medium" value="">
                 <input type="hidden" name="utm_content" class="lead-utm" data-utm="utm_content" value="">
                 <input type="hidden" name="url" class="lead-utm" data-utm="url" value="">
+                
                 <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-1">Nome</label>
-                    <input type="text" name="nome" required placeholder="Seu nome completo" class="lead-input w-full px-4 py-3 rounded-lg bg-zinc-950 border border-white/10 text-white placeholder-gray-500 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition">
+                    <label class="block text-sm font-medium text-zinc-300 mb-1.5">Nome completo</label>
+                    <input type="text" name="nome" required placeholder="Seu nome" class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-600 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                    <input type="email" name="email" required placeholder="seu@email.com" class="lead-input w-full px-4 py-3 rounded-lg bg-zinc-950 border border-white/10 text-white placeholder-gray-500 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition">
+                    <label class="block text-sm font-medium text-zinc-300 mb-1.5">E-mail principal</label>
+                    <input type="email" name="email" required placeholder="seu@email.com" class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-600 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-1">Telefone</label>
-                    <div class="flex rounded-lg overflow-hidden border border-white/10 focus-within:border-brand focus-within:ring-1 focus-within:ring-brand bg-zinc-950">
-                        <span class="inline-flex items-center px-4 py-3 bg-brand text-zinc-950 font-bold select-none shrink-0">+55</span>
-                        <input type="tel" name="telefone" required placeholder="11 99999-9999" inputmode="numeric" pattern="[0-9\s\-]*" maxlength="15" class="lead-input lead-phone flex-1 px-4 py-3 bg-transparent text-white placeholder-gray-500 outline-none min-w-0">
+                    <label class="block text-sm font-medium text-zinc-300 mb-1.5">WhatsApp</label>
+                    <div class="flex rounded-xl overflow-hidden border border-zinc-800 focus-within:border-brand focus-within:ring-1 focus-within:ring-brand bg-zinc-900 transition">
+                        <span class="inline-flex items-center px-4 py-3.5 bg-brand text-zinc-950 font-black select-none shrink-0">+55</span>
+                        <input type="tel" name="telefone" required placeholder="11 99999-9999" inputmode="numeric" maxlength="15" class="lead-phone flex-1 px-4 py-3.5 bg-transparent text-white placeholder-zinc-600 outline-none min-w-0">
                     </div>
-                    <p class="text-gray-400 text-xs mt-1">DDD + número (apenas números)</p>
-                    <p class="lead-phone-err text-red-400 text-xs mt-1 hidden">Informe o DDD e o número completo.</p>
+                    <p class="lead-phone-err text-red-400 text-xs mt-2 hidden font-medium">Informe o DDD e o número completo.</p>
                 </div>
-                <button type="submit" class="w-full bg-brand text-zinc-950 font-bold py-4 rounded-xl uppercase tracking-widest hover:shadow-[0_0_20px_rgba(6,178,71,0.4)] transition mt-2">GARANTIR VAGA</button>
+                
+                <button type="submit" class="w-full bg-brand text-zinc-950 font-black py-4 mt-4 rounded-xl uppercase tracking-widest hover:bg-brand-hover shadow-[0_0_20px_rgba(6,178,71,0.4)] transition transform hover:-translate-y-1">
+                    Avançar para Pagamento
+                </button>
             </form>
         </div>
     </div>
